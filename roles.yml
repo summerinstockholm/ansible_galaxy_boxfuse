@@ -7,7 +7,7 @@
    - build
 
 - name: Provisioning deploy
-  hosts: deploy-host
+  hosts: production-host
   become: yes
 
   roles:
