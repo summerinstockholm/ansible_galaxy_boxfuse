@@ -11,9 +11,9 @@
   git:
    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
    clone: yes
-   dest: {{ dest_for_clone_git_repo }}
+   dest: "{{ dest_for_clone_git_repo }}"
 
 - name: Build Java app
   shell: mvn package
   args:
-   chdir: {{ dest_for_clone_git_repo }}
+   chdir: "{{ dest_for_clone_git_repo }}"
