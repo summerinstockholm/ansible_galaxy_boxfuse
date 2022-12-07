@@ -1,0 +1,20 @@
+---
+# tasks file for deploy
+- name: Ensure OpenJDK and Tomcat9
+  apt: name={{item}} state=present
+  with_items: 
+    - default-jdk
+    - tomcat9
+
+- name: Ensure Tomcat is present
+  service:
+   name: tomcat9
+   state: started
+
+- name: Copy war file to production-host
+  synchronize:
+     src: {{java_artefact}}
+     dest: {{tomcat_webapp}}
+  delegate_to: 84.201.139.208
+  notify: 
+   - restart tomcat9

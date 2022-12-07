@@ -1,0 +1,4 @@
+---
+# defaults file for build
+dest_for_clone_git_repo: /tmp/boxfuse-sample-java-war-hello
+# java_artefact: /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war

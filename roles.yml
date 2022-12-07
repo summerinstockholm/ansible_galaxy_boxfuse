@@ -1,0 +1,14 @@
+---
+- name: Provisioning build
+  hosts: build-host
+  become: yes
+  
+  roles:
+   - build
+
+- name: Provisioning deploy
+  hosts: deploy-host
+  become: yes
+
+  roles:
+   - deploy
