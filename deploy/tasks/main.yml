@@ -15,6 +15,6 @@
   synchronize:
      src: "{{ java_artefact }}"
      dest: "{{ tomcat_webapp }}"
-  delegate_to: build
+  delegate_to: 84.201.139.208
   notify: 
    - restart tomcat9
